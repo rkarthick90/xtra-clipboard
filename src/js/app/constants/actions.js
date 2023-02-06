@@ -1,0 +1,9 @@
+export const SET_INITIAL_STATE = 'SET_INITIAL_STATE';
+export const ADD_CLIPBOARD = 'add new cliboard';
+export const MARK_CLIPBOARD_FAVOURITE = 'mark a clipboard to favourite';
+export const UPDATE_CLIPBOARD = 'update existing content';
+export const DELETE_CLIPBOARD = 'delete clipboard';
+export const BULK_DELETE = 'delete all selected';
+export const BULK_FAVOURITE = 'favourite all selected';
+export const GET_ALL_CLIPBOARDS = 'fetch all clipboards';
+export const SET_APP_STATE = 'app state change';
