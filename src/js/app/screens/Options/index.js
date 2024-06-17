@@ -175,7 +175,7 @@ function Options({ children }) {
       <div className="settings-aside">
         <img src={logo} alt="logo" width="50px" />
         <h1>Xtra Clipboard </h1>
-        <div className="version"> v1.2.13 </div>
+        <div className="version"> v1.2.14 </div>
         <hr />
         <div className="tabs">
           {TAB_CONFIG.map((t, i) => (

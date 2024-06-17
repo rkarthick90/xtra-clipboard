@@ -1,7 +1,8 @@
 {
   "name": "Xtra clipboard",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "description": "A clipboard utlity tool for productivity",
+  "manifest_version": 3,
   "permissions": [
     "storage",
     "contextMenus",
@@ -9,13 +10,17 @@
     "clipboardWrite",
     "activeTab",
     "identity",
-    "alarms"
+    "alarms",
+    "tabs"
   ],
+  "optional_permissions": ["unlimitedStorage"],
+  "host_permissions": [
+        "*://*/*"
+    ],
   "background": {
     "page": "background.html",
     "persistent": true
   },
-  "optional_permissions": ["tabs"],
   "browser_action": {
     "default_title": "Xtra Clipboard",
     "default_icon": "clipboard-128.png",
@@ -32,13 +37,14 @@
     "128": "clipboard-128.png"
   },
   "web_accessible_resources": [
-    "clipboard-16.png",
-    "clipboard-32.png",
-    "clipboard-128.png",
-    "clipboard-48.png",
-    "popup.html"
+    {
+      "resources": ["images/*"],
+      "matches": ["*://*/*"]
+    },
+    {
+      "resources": ["popup.html"]
+    }
   ],
-  "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'",
   "commands": {
     "_execute_browser_action": {
